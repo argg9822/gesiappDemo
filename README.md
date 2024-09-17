@@ -58,13 +58,6 @@
    ```bash
    php artisan db:seed
 
-##Ejecución del servidor
-1. Iniciar el servidor
-    ```bash
-    php artisan serve
-    
-2. Acceder a la aplicación con la ruta especificada en la terminal, por ejemplo `http://localhost:8000`
-
 ##Ejecución de tareas programadas
 1. Verificar si existen tareas programadas
    ```bash
@@ -96,4 +89,11 @@ Puede ocurrir debido a problemas en la instalación de Composer. Para solucionar
 3. Limpiar caché de ser necesario:
    ```bash
    composer clear-cache
+
+##Ejecución del servidor
+1. Iniciar el servidor
+    ```bash
+    php artisan serve
+    
+2. Acceder a la aplicación con la ruta especificada en la terminal, por ejemplo `http://localhost:8000`
 
