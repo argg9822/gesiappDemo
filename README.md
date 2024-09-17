@@ -65,6 +65,23 @@
     
 2. Acceder a la aplicación con la ruta especificada en la terminal, por ejemplo `http://localhost:8000`
 
+##Ejecución de tareas programadas
+1. Verificar si existen tareas programadas
+   ```bash
+   php artisan schedule:list
+
+2. Ver el estado de las tareas en el sistema (cron jobs)
+   ```bash
+   crontab -l
+
+3. Si la respues es "no crontab for trakio" significa que no se ha configurado ningún cron job, entonces se ejecuta el siguiente comando para abrir el archivo crontab
+   ```bash
+   crontab -e
+
+4. Agregar la siguiente línea al archivo crontab para que Laravel ejecute el scheduler cada minuto
+   ```bash
+   * * * * * cd /home/trakio/htdocs/www.trakio.pro/gesilaravel && php artisan schedule:run >> /dev/null 2>&
+   
 ## Solución de errores comunes
 Error: require(C:/xampp/htdocs/gesilaravel-main/vendor/composer/../symfony/clock/Resources/now.php): Failed to open stream
 Puede ocurrir debido a problemas en la instalación de Composer. Para solucionarlo:
@@ -79,3 +96,4 @@ Puede ocurrir debido a problemas en la instalación de Composer. Para solucionar
 3. Limpiar caché de ser necesario:
    ```bash
    composer clear-cache
+
