@@ -27,14 +27,29 @@
    ```bash
    composer install
 
-2. instalación de spatie/browsershot
+2. Node JS (instalar de manera global en servidores Linux)
+
+   Instalar el repositorio de NodeSource para la versión de Node.js
+   ```bash
+   curl -fsSL https://deb.nodesource.com/setup_22.x | sudo -E bash -
+   sudo apt-get install -y nodejs
+
+4. Puppeteer v23.3.0
+   ```bash
+   npm install puppeteer@23.3.0
+
+5. Instalar Puppeteer y otras dependencias globalmente 
+   ```bash
+   sudo npm install -g puppeteer
+   
+3. Instalación de spatie/browsershot
    ```bash
    composer require spatie/browsershot
-
-3. Node JS
+   
+4. Instalar Chromium
    ```bash
-   apt install nodejs
-
+   sudo apt-get install chromium
+   
 ## Configuración del entorno
 1. Copiar el archivo `env.example` a `.env`
    ```bash
